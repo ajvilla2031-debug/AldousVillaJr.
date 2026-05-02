@@ -30,3 +30,24 @@ def get_valid_attendance(student_name):
         except ValueError:
             # Handles non-integer inputs (e.g., letters, symbols)
             print("Invalid input. Please enter a number (1 or 0).")
+
+def check_attendance(student_names):
+
+    #This function processes attendance for all students
+    present_count = 0 # Counter for present students
+    absent_counts = 0 # Counter for absent students
+
+    #Loop through each student in the list
+    for student in student_names:
+
+        # call the function to get valid attendance input
+        status = get_valid_attendance(student)
+
+        if status == 1: # If student is present
+            present_count += 1 # Increase present counter
+
+        else: # If student is absent
+            absent_count += 1 # Increase absent counter
+
+    # Return the final counts
+    return present_count, absent_count
