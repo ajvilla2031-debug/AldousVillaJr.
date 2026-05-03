@@ -50,4 +50,29 @@ def check_attendance(student_names):
             absent_count += 1 # Increase absent counter
 
     # Return the final counts
+
+def main():
+    # Main function controls the overall program flow
+
+    # List of student names (array equivalent)
+    student_names = ["Aldous", "Matt", "Elric", "Euan", "Hanns"]
+
+    # Display program start message
+    print("=== Attendance Checker Started ===")
+
+    # Call function to process attendance
+    present_count, absent_count = check_attendance(student_names)
+
+    # Display final results
+    print("\n=== Attendance Summary ===")
+    print(f"Total Present: {present_count}")
+    print(f"Total Absent: {absent_count}")
+    
+# Start the program
+main()
     return present_count, absent_count
+
+
+
+
+
